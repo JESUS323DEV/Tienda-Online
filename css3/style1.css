@@ -63,7 +63,9 @@ html {
   font-family: sans-serif;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
-
+/* =======================
+   MENÚ TOGGLE
+======================= */
 .menu-toggle {
   display: none;
   font-size: 2rem;
@@ -104,9 +106,17 @@ html {
   padding: 1rem;
 }
 
+.img-cont a{
+  text-align: center;
+  color: black;
+  text-decoration: none;
+}
+
+
+
 .img-cont img {
   width: 400px;
-  height: auto;
+  height: 400px;
   display: block;
 }
 
@@ -204,7 +214,8 @@ html {
   }
 
   .img-cont img {
-    max-width: 100%;
+    width: 160px;
+    height: 200px;
   }
 
   .cont-footer {
