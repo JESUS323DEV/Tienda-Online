@@ -60,15 +60,15 @@ html {
    BOTÓN RESERVA
 ======================= */
 .cont-reserva {
-  background-color: #333;
-  color: #fff;
-  padding: 0.5rem;
-  border-radius: 8px;
-  border: 1px solid;
-  font-size: 2rem;
-  font-weight: bold;
-  font-family: sans-serif;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    background-color: #333;
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: 1px solid;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .menu-toggle {
@@ -93,21 +93,40 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 5rem;
     max-width: 100%;
     flex-wrap: wrap;
+
+
 }
 
-.img-main {
+.cont-img-mejorada {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 1rem;
+    
 
-    max-width: 500px;
-    margin: 2rem 10rem 2rem 0;
+}
 
+.cont-img-mejorada img {
+
+    width: 200px;
+    margin-bottom: 1.5rem;
+
+}
+
+
+.img-producto {
+    width: 500px;
 }
 
 .cont-details {
     display: flex;
     flex-direction: column;
     width: 20%;
+    margin-left: 10rem;
+
 }
 
 .cont-details summary {
@@ -232,6 +251,11 @@ html {
     color: white;
 }
 
+#galeria-overlay {
+  display: none;
+}
+
+
 /* =======================
    MEDIA QUERIES - MÓVILES
 ======================= */
@@ -302,9 +326,50 @@ html {
     }
 
 
+
     /* =======================
    productos a vender
 ======================= */
+
+/*---------------------------------------------*/
+
+    /* =======================
+   carrusel de imágenes HORIZONTAL-PARA-DISPOSITIVOS-MÓVILES
+======================= */
+
+    .cont-img-mejorada {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
+        width: 100vw;
+        height: auto;
+    }
+
+    .cont-img-mejorada img {
+        flex: 0 0 100%;
+        width: 200px;
+
+        scroll-snap-align: start;
+        object-fit: cover;
+        border-radius: 0;
+    }
+
+    .contador-img {
+        text-align: center;
+        font-size: 1.2rem;
+        margin-top: 1rem;
+        color: #0c5f61;
+        font-weight: bold;
+    }
+
+    /* Oculta imagen grande en móvil */
+    .img-producto {
+        display: none;
+    }
+
 
     .cont-producto {
 
@@ -313,12 +378,21 @@ html {
         margin: 2rem 0 4rem 0;
         padding: 0.5rem;
     }
-
+    
+    /* =======================
+   COMPRAR
+======================= */
     .cont-details {
 
         margin-top: 5rem;
+        margin: 0;
         padding: 0;
         width: 100%;
+    }
+
+    .img-producto {
+
+        max-width: 300px;
     }
 
     .img-main {
@@ -338,4 +412,80 @@ html {
         padding: 1rem;
         text-align: center;
     }
+
 }
+
+   /* =======================
+   MEDIAQUERYS - MIN-MAX 481PX- IMAGEN-OCULTA-EN-PANTALLA-DE-ORDENADOR
+======================= */
+
+@media (min-width: 481px) {
+  .contador-img {
+    display: none;
+  }
+    .cont-img-mejorada img:nth-child(1) {
+    display: none;
+  }
+}
+
+  /* =======================
+   MEDIAQUERYS - MIN-MAX 1024PX - GALERÍA DE IMÁGENES 
+======================= */
+
+@media (min-width: 1024px) {
+  #galeria-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    flex-direction: column;
+  }
+
+  #galeria-overlay.mostrar {
+    display: flex;
+  }
+
+  #imagen-grande {
+    max-width: 90vw;
+    max-height: 80vh;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  }
+
+  #cerrar-galeria {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    font-size: 2rem;
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  .galeria-flecha {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2.5rem;
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  .galeria-flecha.izq { left: 2rem; }
+  .galeria-flecha.der { right: 2rem; }
+}
+
+
+
+
+
+
+  
