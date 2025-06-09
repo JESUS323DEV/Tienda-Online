@@ -351,10 +351,11 @@ html {
     .cont-img-mejorada img {
         flex: 0 0 100%;
         width: 200px;
-
+        max-width: 100%;
         scroll-snap-align: start;
         object-fit: cover;
         border-radius: 0;
+
     }
 
     .contador-img {
@@ -393,6 +394,7 @@ html {
     .img-producto {
 
         max-width: 300px;
+        width: 300px;
     }
 
     .img-main {
