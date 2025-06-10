@@ -14,7 +14,6 @@ html {
     font-family: sans-serif;
 
     line-height: 1.6;
-    color: #333;
     overflow-x: hidden;
 }
 
@@ -212,45 +211,72 @@ html {
    FOOTER
 ======================= */
 .cont-footer {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    border: 1px solid;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 15rem;
+  text-align: center;
+  max-width: 100%;
+  margin-top: 5rem;
     background-color: #0c5f61;
+
+
 }
 
-.cont-contacto {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 3rem;
+.cont-footer img {
+  max-width: 500px;
+  width: 100px;
+  border-radius: 20px;
+
 }
 
-.cont-contacto img {
-    max-width: 60px;
-    border-radius: 50%;
-    padding: 0.2rem;
+.cont-contactos {
+  max-width: 100%;
+  width: 20%;
+  gap: 3.5rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+
 }
 
-.cont-contacto a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 1rem;
+.cont-insta {
+
+  max-width: 100px;
 }
 
-.cont-contacto p,
-.cont-contacto i {
-    font-weight: bold;
-    font-size: 1.3rem;
-    color: white;
+.cont-insta img {
+
+  width: 50px;
 }
 
-.cont-contacto h3 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: white;
+.cont-contactos ul {
+  list-style-type: none;
+  padding: 1rem;
 }
 
+.cont-contactos li {
+
+  padding: 0.4rem;
+  font-weight: bold;
+}
+
+.cont-contactos a {
+
+  text-decoration: none;
+}
+
+.cont-span {
+
+  color: white;
+  background-color: green;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+}
+/*GALERÍA*/
 #galeria-overlay {
   display: none;
 }
@@ -287,38 +313,48 @@ html {
     /* =======================
    MEDIA QUERIES - MÓVILES - FOOTER
 ======================= */
-    .cont-footer {
-        flex-direction: column;
-        text-align: center;
-        gap: 1rem;
-    }
+ .cont-footer {
 
-    .cont-footer h3 {
-        font-size: 2rem;
-    }
+    padding: 0;
+    margin: 0;
+    gap: 2rem;
+    background-color: #0c5f61;
+  }
 
-    .cont-contacto {
-        flex-direction: column;
-        gap: 1.5rem;
-    }
 
-    .cont-contacto p {
-        font-weight: bold;
-        color: #fff;
-        font-size: 1.2rem;
-    }
+  .cont-contactos {
+   justify-content: center;
+   align-items: center;
+   border-bottom: 1px solid lightgray;
+   border-bottom-width: 4px;
+   
+   gap: 1rem;
+   max-width: 100%;
+   width: 100%;
 
-    .cont-contacto a {
-        color: #858484;
-        font-size: 1rem;
-    }
+  }
 
-    .header-cont ul {
-        flex-direction: column;
-        gap: 1rem;
-        align-items: center;
-    }
 
+.cont-insta {
+
+    padding: 0.2rem;
+  }
+  .cont-insta img {
+
+    max-width: 100px;
+    width: 80px;
+  }
+ 
+  .cont-contactos ul {
+padding: 1rem;
+  }
+
+  .cont-contactos li {
+
+    padding: 0.5rem;
+  }
+
+/*HAZ-TU-RESERVA */
     .cont-reserva {
         margin-top: 10px;
         font-size: 1rem;

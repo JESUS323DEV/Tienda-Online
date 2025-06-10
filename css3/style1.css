@@ -103,18 +103,20 @@ html {
   color: #0c5f61;
   text-align: center;
   font-size: 2.9rem;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   padding: 1.5rem;
 
 }
+
 .cont-h3 {
   text-align: center;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 2rem;
   color: #0c5f61;
   padding: 1.5rem;
 
 }
+
 .img-cont {
   display: flex;
   flex-wrap: wrap;
@@ -127,10 +129,11 @@ html {
   text-align: center;
   font-size: 0.9rem;
   color: rgb(136, 134, 134);
-  
-  
+
+
 
 }
+
 .img-cont a {
 
   color: black;
@@ -140,56 +143,82 @@ html {
 .img-cont img {
   width: 400px;
   height: 400px;
- 
+
 }
 
 /* =======================
    FOOTER
 ======================= */
+
 .cont-footer {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  border: 1px solid;
-  background-color: #0c5f61;
-
-}
-
-.cont-contacto {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 3rem;
+  justify-content: center;
+  gap: 15rem;
+  text-align: center;
+  max-width: 100%;
+  margin-top: 5rem;
+    background-color: #0c5f61;
+
+
 }
 
-.cont-contacto img {
-  max-width: 60px;
-  border-radius: 50%;
-  padding: 0.2rem;
+.cont-footer img {
+  max-width: 500px;
+  width: 100px;
+  border-radius: 20px;
+
 }
 
-.cont-contacto a {
+.cont-contactos {
+  max-width: 100%;
+  width: 20%;
+  gap: 3.5rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+
+}
+
+.cont-insta {
+
+  max-width: 100px;
+}
+
+.cont-insta img {
+
+  width: 50px;
+}
+
+.cont-contactos ul {
+  list-style-type: none;
+  padding: 1rem;
+}
+
+.cont-contactos li {
+
+  padding: 0.4rem;
+  font-weight: bold;
+}
+
+.cont-contactos a {
+
   text-decoration: none;
-  color: #fff;
-  font-size: 1rem;
 }
 
-.cont-contacto p{
-  font-weight: bold;
-  font-size: 1.3rem;
-  color: white;
-}
-.cont-contacto i {
+.cont-span {
 
-  font-size: 1rem;
   color: white;
+  background-color: green;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+
+
 }
 
-.cont-contacto h3 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: white;
-}
 
 /* =======================
    MEDIA QUERIES - MÓVILES
@@ -199,16 +228,16 @@ html {
   .menu-toggle {
     display: block;
   }
-  
+
   .nav-menu.active {
     display: block;
   }
-  
+
   main {
     margin-top: 100px;
   }
 
-/* MENU-NAV-HEADER*/
+  /* MENU-NAV-HEADER*/
 
   .nav-menu {
     display: none;
@@ -220,36 +249,41 @@ html {
     padding: 1rem 0;
 
   }
+
   .nav-menu ul {
     flex-direction: column;
     align-items: center;
   }
-/* BOTTOM-RESERVA*/
 
-    .cont-reserva {
+  /* BOTTOM-RESERVA*/
+
+  .cont-reserva {
     margin-top: 10px;
     font-size: 1rem;
     padding: 10px 16px;
   }
-/* IMAGEN-AJUSTADA-MAIN*/
+
+  /* IMAGEN-AJUSTADA-MAIN*/
 
   .img-ajustada {
     max-width: 100%;
     height: 50vh;
   }
-/* TEXTO-H2-H3-MAIN*/
+
+  /* TEXTO-H2-H3-MAIN*/
 
   .cont-h2 {
     font-size: 2rem;
   }
-   .cont-h3 {
+
+  .cont-h3 {
 
     font-size: 1.3rem;
     margin: 0;
     padding: 1rem;
   }
 
-/*PRODUCTOS-A-VENDER*/
+  /*PRODUCTOS-A-VENDER*/
 
   .img-cont {
     display: grid;
@@ -262,45 +296,54 @@ html {
     height: 200px;
   }
 
-/*FOOTER*/
+
+
+  /*FOOTER*/
+
+
   .cont-footer {
-    flex-direction: column;
-    text-align: center;
-    gap: 1rem;
-  }
 
-  .cont-footer h3 {
-    font-size: 2rem;
-  }
-
-  .cont-contacto {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  .cont-contacto p {
-    font-weight: bold;
-    color: #fff;
-    font-size: 1.2rem;
-  }
-
-  .cont-contacto a {
-    color: #858484;
-    font-size: 1rem;
-  }
-
-  .header-cont ul {
-    flex-direction: column;
-    gap: 1rem;
-    align-items: center;
+    padding: 0;
+    margin: 0;
+    gap: 2rem;
+    background-color: #0c5f61;
   }
 
 
+  .cont-contactos {
+   justify-content: center;
+   align-items: center;
+   border-bottom: 1px solid lightgray;
+   border-bottom-width: 4px;
+   
+   gap: 1rem;
+   max-width: 100%;
+   width: 100%;
+
+  }
 
 
+.cont-insta {
+
+    padding: 0.2rem;
+  }
+  .cont-insta img {
+
+    max-width: 100px;
+    width: 80px;
+  }
  
+  .cont-contactos ul {
+padding: 1rem;
+  }
 
+  .cont-contactos li {
 
-
- 
+    padding: 0.5rem;
+  }
 }
+
+
+
+
+  
